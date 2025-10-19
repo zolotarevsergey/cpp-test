@@ -1,15 +1,15 @@
 ﻿#include <iostream>
-#include <iomanip>   // for setw, setprecision
-#include <cmath>     // for pow, log, fabs
-using std::cout;
+#include <iomanip> // for setw, setprecision
+#include <cmath>   // for pow, log, fabs
 using std::cin;
+using std::cout;
 using std::endl;
 using std::fixed;
-using std::setw;
 using std::setprecision;
+using std::setw;
 
 int main()
-{ 
+{
     double A, B, step;
     int N;
 
@@ -25,13 +25,16 @@ int main()
     cout << "\n   x\t\tTailorSeries\t\tln(x)\t\tDifference" << endl;
     cout << "---------------------------------------------------------------\n";
 
-    for (double x = A; x <= B; x += step) {
-        if (x <= 0) continue; // must be inside braces
+    for (double x = A; x <= B; x += step)
+    {
+        if (x <= 0)
+            continue;
 
         double q = (x - 1) / (x + 1);
         double sum = 0.0;
 
-        for (int k = 0; k < N; k++) {
+        for (int k = 0; k < N; k++)
+        {
             sum += pow(q, 2 * k + 1) / (2 * k + 1);
         }
 

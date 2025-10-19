@@ -1,0 +1,102 @@
+#------------------------------------------------------------------
+# Visual Studio / MSVC
+#------------------------------------------------------------------
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## VS 2019/2022 cache
+.vs/
+!/.vs/config/
+
+## MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+## C++ specific build artifacts
+*.ilk
+*.meta
+*.obj
+*.obj.*
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlog
+*.idb
+*.pdb.srcsrv
+
+## Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendfile
+
+#------------------------------------------------------------------
+# Visual Studio Code
+#------------------------------------------------------------------
+## Ignore the .vscode folder, but keep shared settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+*.code-workspace
+
+#------------------------------------------------------------------
+# General C++ (for non-MSVC builds, e.g., via VS Code)
+#------------------------------------------------------------------
+## Build folders
+build/
+build-*/
+cmake-build-*/
+
+## Compiled binaries and libraries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+## Object files
+*.o
+*.ko
+
+## Precompiled Headers
+*.gch
+
+## Dependantcy directories
+node_modules/

@@ -1,24 +1,32 @@
-﻿#include <stdio.h>
-#include <math.h>
+﻿#include <iostream>
+#include <iomanip>   // for setw, setprecision
+#include <cmath>     // for pow, log, fabs
+using std::cout;
+using std::cin;
+using std::endl;
+using std::fixed;
+using std::setw;
+using std::setprecision;
 
-int main() {
+int main()
+{ 
     double A, B, step;
     int N;
 
-    printf("Enter A: ");
-    scanf_s("%lf", &A);
-    printf("Enter B: ");
-    scanf_s("%lf", &B);
-    printf("Enter step: ");
-    scanf_s("%lf", &step);
-    printf("Enter number of iterations N: ");
-    scanf_s("%d", &N);
+    cout << "Enter A:" << endl;
+    cin >> A;
+    cout << "Enter B:" << endl;
+    cin >> B;
+    cout << "Enter step:" << endl;
+    cin >> step;
+    cout << "Enter number of iterations N:" << endl;
+    cin >> N;
 
-    printf("\n   x\t\tTailorSeries\t\tln(x)\t\tDifference\n");
-    printf("---------------------------------------------------------------\n");
+    cout << "\n   x\t\tTailorSeries\t\tln(x)\t\tDifference" << endl;
+    cout << "---------------------------------------------------------------\n";
 
     for (double x = A; x <= B; x += step) {
-        if (x <= 0) continue;
+        if (x <= 0) continue; // must be inside braces
 
         double q = (x - 1) / (x + 1);
         double sum = 0.0;
@@ -32,7 +40,12 @@ int main() {
         double exact = log(x);
         double diff = fabs(sum - exact);
 
-        printf("%8.4f\t%15.10f\t%15.10f\t%15.10f\n", x, sum, exact, diff);
+        cout << fixed
+             << setw(8) << setprecision(4) << x << '\t'
+             << setprecision(10)
+             << setw(15) << sum << '\t'
+             << setw(15) << exact << '\t'
+             << setw(15) << diff << '\n';
     }
 
     return 0;

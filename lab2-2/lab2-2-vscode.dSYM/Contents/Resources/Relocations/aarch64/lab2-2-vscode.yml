@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sergii/projects/cpp-test/lab2-2/lab2-2-vscode'
+relocations:     []
+...
